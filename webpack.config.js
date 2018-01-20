@@ -4,15 +4,11 @@ const path = require('path')
 module.exports = {
     entry: './src/app.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js'
     },
     module: {
         loaders: [
-            {
-                test: /\.html$/,
-                loader: 'file-loader?name=[name].[ext]',
-            },
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
